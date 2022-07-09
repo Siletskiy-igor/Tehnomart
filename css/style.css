@@ -1,0 +1,966 @@
+:root {
+    --basic-red: #ee3643;
+    --basic-green: #63a63e;
+    --basic-black: #000000;
+    --basic-deep-grey: #293449;
+    --basic-dark-grey: #32425c;
+    --basic-grey: #3d546f;
+    --basic-greylight: #c5c5c5;
+    --basic-background: #f1f5f7;
+    --basic-white: #ffffff;
+    --basic-beige: #f9f5f0;
+
+    --special-yellow: #ffbf47;
+    --special-blue: #3bbce3;
+    --special-lilac: #dc91d8;
+    --special-greenlight: #8ed78f;
+    --special-yellowlight: #ffd180;
+    --special-beige: #f7f3ec;
+
+    --success: #5fbb2d;
+    --warning: #ffbf47;
+    --error: #ba2732;
+}
+
+.page {
+    margin: 0;
+    padding: 0;
+    min-width: 960px;
+}
+
+.container {
+    width: 940px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.button {
+    display: block;
+    border: none;
+
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-decoration: none;
+    color: var(--basic-white);
+    text-transform: uppercase;
+    background-color: var(--basic-red);
+}
+
+.button:hover {
+    background-color: #ca2c37;
+}
+.button:focus {
+    background-color: #ca2c37;
+}
+.button:active {
+    background-color: #ba2732;
+}
+
+.button--secondary {
+    background-color: var(--basic-white);
+    color: var(--basic-black);
+}
+
+.button--third {
+    background-color: transparent;
+    border: 1px solid #E5E5E5;
+    border-radius: 2px;
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--basic-black);
+}
+
+.button--third:hover {
+    background-color: transparent;
+}
+.button--third:focus {
+    background-color: transparent;
+}
+.button--third:active {
+    background-color: transparent;
+    border-color: var(--basic-red);
+}
+/* Что-то нужно придумать для этой кнопки */
+
+/* HEADER */
+.header__top {
+    background-color: var(--basic-deep-grey);
+}
+
+.header__logo {
+    display: block;
+    padding: 13px 56px 17px;
+
+    background-color: var(--basic-red);
+    box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+}
+
+.header__logo:active {
+    background-color: var(--error);
+}
+
+
+.menu-navigation {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.menu-navigation__link {
+    display: block;
+    min-width: 150px;
+
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration: none;
+    color: var(--basic-white);
+}
+
+
+.menu-navigation__link:active {
+    color: rgba(255, 255, 255, 0.5);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.menu-navigation__link-bookmark {
+    background-color: transparent;
+}
+
+.menu-navigation__link-cart {
+    background-color: var(--basic-red);
+}
+
+.menu-navigation__link-cart:hover {
+    background-color: var(--error);
+}
+
+.menu-navigation__link-order {
+    background-color: var(--basic-green);
+}
+
+.menu-navigation__link-order:hover {
+    background-color: var(--success);
+}
+
+.header__bottom {
+    background-color: var(--basic-background);
+}
+
+.page__title {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Cuprum";
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    color: var(--basic-red);
+}
+
+.header-contacts__phone {
+    display: block;
+    border: 3px solid var(--basic-white);
+
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 30px;
+    color: var(--basic-red);
+    text-decoration: none;
+}
+
+.header-contacts__address {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--basic-dark-grey);
+}
+
+.login {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.login__link {
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 21px;
+    text-decoration: none;
+    color: var(--basic-black);
+    background-color: var(--basic-white);
+}
+
+.login__link:hover {
+    color: var(--basic-red);
+}
+
+.login__link:focus {
+    color: var(--basic-red);
+}
+.login__link:active {
+    color: var(--basic-greylight);
+}
+
+.site-navigation__list {
+    margin: 0;
+    padding: 0;
+
+    background-color :var(--basic-dark-grey);
+    list-style: none;
+    box-shadow: inset 0px -5px 0px #293449;
+}
+
+.site-navigation__link {
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration: none;
+    color: var(--basic-white);
+    background-color: transparent;
+}
+
+.site-navigation__link:hover {
+    background-color: #293449;
+}
+.site-navigation__link:focus {
+    background-color: #293449;
+}
+.site-navigation__link:active {
+    background-color: #1d2739;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* PROMO */
+
+.promo__list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    background-color: var(--special-yellow);
+}
+
+.promo-card__title {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Cuprum';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: var(--basic-white);
+}
+
+.promo-card__link {
+    font-family: 'Cuprum';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--basic-white);
+    background-color: rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+}
+
+.promo-card__link:hover {
+    background-color: rgba(197, 197, 197, 0.3);
+}
+.promo-card__link:focus {
+    background-color: rgba(197, 197, 197, 0.3);
+}
+.promo-card__link:active {
+    background-color: rgba(169, 169, 169, 0.3);
+}
+
+.slider {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.slide__title {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 36px;
+    color:var(--basic-white);
+}
+
+.slide__description {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--basic-white);
+}
+
+/* POPULAR PRODUCT */
+
+.section-header__title {
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+    color: var(--basic-dark-grey);
+}
+
+.section-header {
+    background-color: var(--basic-beige);
+}
+
+.popular-catalog__list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.product-card {
+    background-color: var(--basic-white);
+}
+
+.product-card:hover {
+    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+}
+
+.product-card__title {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    color: var(--basic-black);
+}
+
+.product-card__price-invalid {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 18px;
+    color: var(--basic-greylight);
+}
+
+.product-card__price-valid {
+    background-image: url(../img/icons/red-button.svg);
+    background-repeat: no-repeat;
+}
+
+.card-popup__button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 2px;
+
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.card-popup__button--buy {
+    background-color: var(--basic-green);
+    color: var(--basic-white);
+    box-shadow: inset 0px -3px 0px #367315;
+}
+
+.card-popup__button--buy:hover {
+    background-color: var(--success);
+}
+.card-popup__button--buy:focus {
+    background-color: var(--success);
+}
+.card-popup__button--buy:active {
+    background-color: #518534;
+}
+
+.card-popup__button--like {
+    background-color: transparent;
+    border: 3px solid #63a63e;
+    color: var(--basic-dark-grey);
+}
+
+.card-popup__button--like:hover {
+    border: 3px solid var(--basic-dark-grey);
+}
+.card-popup__button--like:focus {
+    border: 3px solid var(--basic-dark-grey);
+}
+.card-popup__button--like:active {
+    border: 3px solid rgba(50, 66, 92, 0.3);
+}
+
+/* MANUFACTURERS */
+
+.manufacturers__list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+.manufacturers__link:hover {
+    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+}
+.manufacturers__link:focus {
+    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+}
+.manufacturers__link:active {
+    opacity: 0.5;
+}
+
+/* SERVICES */
+
+.services {
+    background-color: var(--basic-background);
+}
+
+.services__title {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+    color: var(--basic-black);
+}
+
+.services__title-description {
+    margin: 0;
+    padding: 0;
+
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.services-slider__control-list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.services-slider__control-button {
+    border: none;
+    background-color: var(--basic-dark-grey);
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 30px;
+    color: var(--basic-white);
+    box-shadow: 0px 1px 0px #293449,
+        inset 0px 1px 0px #405069;
+}
+.services-slider__control-button:hover {
+    background-color: var(--basic-deep-grey);
+}
+.services-slider__control-button:focus {
+    background-color: var(--basic-deep-grey);
+}
+.services-slider__control-button:active {
+    color: var(--basic-dark-grey);
+    background-color: var(--basic-white);
+    box-shadow: none;
+}
+
+.services-slider__slide-title {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+    color: var(--basic-dark-grey);
+}
+
+.services-slider__slide-description {
+    margin: 0;
+    padding: 0;
+
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    color: var(--basic-black);
+}
+
+/* ABOUT */
+
+.about__information-title {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: var(--basic-black);
+}
+
+
+.about__information-text {
+    margin: 0;
+    padding: 0;
+
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    color: var(--basic-black);
+}
+
+.about__information-list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.about__information-item {
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--basic-black);
+}
+
+.about__contacts-title {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Cuprum';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: var(--basic-black);
+}
+
+.about__contacts-text {
+    margin: 0;
+    padding: 0;
+
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    color: var(--basic-black);
+}
+
+/* FOOTER */
+
+.footer-top {
+    background-color: var(--basic-dark-grey);
+}
+
+.page-footer__address {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--basic-white);
+}
+
+.page-footer__phone {
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration: none;
+    color: var(--basic-white);
+}
+
+.page-footer__site-navigation {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.page-footer__site-navigation-link {
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration: none;
+    color: var(--basic-white);
+}
+
+.page-footer__catalog-navigation {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.page-footer__catalog-navigation-link {
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration: none;
+    color: var(--special-yellowlight);
+}
+
+.footer-bottom {
+    background-color: var(--basic-deep-grey);
+}
+
+.copyright {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--basic-white);
+}
+
+.socials {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.socials__link {
+    display: block;
+    background-color: #312a3a;
+    border-radius: 50%;
+}
+
+.socials__link:hover {
+    background-color: var(--basic-red);
+}
+
+.socials__link:focus {
+    background-color: var(--basic-red);
+}
+
+.socials__link:active {
+    background-color: var(--basic-red);
+}
+
+.sources__text {
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--basic-white);
+}
+
+.sources__link {
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    text-decoration: none;
+    color: var(--special-yellowlight);
+}
+
+.sources__link:hover {
+    text-decoration: underline;
+}
+.sources__link:focus {
+    text-decoration: underline;
+}
+.sources__link:active {
+    color: var(--basic-red);
+}
+
+/* POPUP */
+
+.email-popup__top {
+    background-color: var(--basic-white);
+}
+
+.email-popup__label {
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--basic-black);
+}
+
+.email-popup__bottom {
+    background-color: #f4f4f4;
+}
+
+.cart-popup__top {
+    background-color: var(--basic-white);
+}
+
+.cart-popup__text {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: var(--basic-black);
+}
+
+.cart-popup__bottom {
+    background-color: #f4f4f4;
+}
+
+/* CATALOG */
+
+.breadcrumbs {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.breadcrumbs__link {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--basic-black);
+}
+
+.catalog__title {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+
+    background-color: var(--basic-background);
+}
+
+.filters__header {
+    background-color: var(--special-beige);
+}
+
+.filters__header-title {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+
+    color: var(--basic-black);
+}
+
+.filters__form-section {
+    border: none;
+}
+
+.filters__form-section-title {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: var(--basic-black);
+}
+
+.filters__form-section-label {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: var(--basic-black);
+}
+
+.results__header {
+    background-color: var(--special-beige);
+}
+
+.results__header-title {
+    margin: 0;
+    padding: 0;;
+
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: var(--basic-black);
+}
+
+.sort-list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.sort-list__button {
+    padding: 0;
+
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.3);
+
+    border: none;
+    border-bottom: 1px dotted var(--basic-red);
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.sort-list__button:hover {
+    color: var(--basic-black);
+    border: none;
+    border-bottom: 1px solid var(--basic-red);
+}
+.sort-list__button:focus {
+    color: var(--basic-black);
+    border: none;
+    border-bottom: 1px solid var(--basic-red);
+}
+.sort-list__button:active {
+    border: none;
+    color: var(--basic-red);
+}
+
+.sort-direction-list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+/* RESULTS */
+
+.results__list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.pagination {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.catalog__about {
+    background-color: var(--basic-background);
+}
+
+.catalog-about__title {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: var(--basic-black)
+}
+
+.catalog-about__description {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+    color: var(--basic-black);
+}
