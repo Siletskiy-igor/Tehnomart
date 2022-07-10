@@ -976,7 +976,21 @@
 /* FOOTER */
 
 .footer-top {
+    padding-bottom: 54px;
+
     background-color: var(--basic-dark-grey);
+}
+
+.footer-top__wrapper {
+    display: grid;
+    align-items: start;
+    row-gap: 22px;
+    grid-template-columns: 335px 1fr;
+    grid-template-rows: auto auto;
+}
+
+.page-footer__contacts {
+    grid-row: 2 / 3;
 }
 
 .page-footer__address {
@@ -1002,10 +1016,21 @@
 }
 
 .page-footer__site-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-self: end;
     margin: 0;
     padding: 0;
 
     list-style: none;
+}
+
+.page-footer__site-navigation-item {
+    margin-top: 37px;
+}
+
+.page-footer__site-navigation-item:not(:last-child) {
+    margin-right: 58px;
 }
 
 .page-footer__site-navigation-link {
@@ -1019,10 +1044,18 @@
 }
 
 .page-footer__catalog-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-self: end;
+
     margin: 0;
     padding: 0;
 
     list-style: none;
+}
+
+.page-footer__catalog-navigation-item:not(:last-child) {
+    margin-right: 58px;
 }
 
 .page-footer__catalog-navigation-link {
@@ -1036,10 +1069,17 @@
 }
 
 .footer-bottom {
+    padding: 34px 0 29px;
     background-color: var(--basic-deep-grey);
 }
 
+.footer-bottom__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
 .copyright {
+    flex-basis: 226px;
     margin: 0;
     padding: 0;
 
@@ -1054,14 +1094,25 @@
 .socials {
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 
     list-style: none;
 }
 
+.socials__item:not(:last-child) {
+    margin-right: 2px;
+}
+
 .socials__link {
-    display: block;
-    background-color: #312a3a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #212A3A;
     border-radius: 50%;
+    width: 44px;
+    height: 44px;
 }
 
 .socials__link:hover {
@@ -1076,7 +1127,14 @@
     background-color: var(--basic-red);
 }
 
+.sources {
+    display: flex;
+    flex-basis: 300px;
+}
+
 .sources__text {
+    margin: 0;
+    padding: 0;
     font-family: "Cuprum";
     font-style: normal;
     font-weight: 400;
@@ -1085,7 +1143,21 @@
     color: var(--basic-white);
 }
 
+.sources__text:not(:last-child) {
+    margin-right: 51px;
+}
+
+.sources__text-callback {
+    flex-basis: 137px;
+}
+
+.sources__text-desighned {
+    flex-basis: 98px;
+}
+
 .sources__link {
+    display: block;
+
     font-family: "Cuprum";
     font-style: normal;
     font-weight: 400;
