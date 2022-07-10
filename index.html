@@ -147,12 +147,12 @@
             </header>
             <ul class="popular-catalog__list">
                 <li class="popular-catalog__item">
-                    <article class="product-card tabindex="1">
-                        <h3 class="product-card__title">Перфоратор BOSCH BFG 9000</h3>
+                    <article class="product-card">
+                        <h3 class="product-card__title">Перфоратор BOSCH BFG&nbsp;9000</h3>
                         <div class="product-card__image-wrapper">
                             <img class="product-card__img" src="img/prod-9000.jpg" alt="">
                         </div>
-                        <p class="product-card__price-invalid">32500 Р.</p>
+                        <s class="product-card__price-invalid">32500 Р.</s>
                         <p class="product-card__price-valid">25500 Р.</p>
                         <div class="product-card__popup card-popup">
                             <button class="card-popup__button card-popup__button--buy">Купить</button>
@@ -162,11 +162,11 @@
                 </li>
                 <li class="popular-catalog__item">
                     <article class="product-card">
-                        <h3 class="product-card__title">Перфоратор BOSCH BFG 3000</h3>
+                        <h3 class="product-card__title">Перфоратор BOSCH BFG&nbsp;3000</h3>
                         <div class="product-card__image-wrapper">
                             <img class="product-card__img" src="img/prod-3000.jpg" alt="">
                         </div>
-                        <p class="product-card__price-invalid">22500 Р.</p>
+                        <s class="product-card__price-invalid">22500 Р.</s>
                         <p class="product-card__price-valid">15500 Р.</p>
                         <div class="product-card__popup card-popup">
                             <button class="card-popup__button card-popup__button--buy">Купить</button>
@@ -176,11 +176,11 @@
                 </li>
                 <li class="popular-catalog__item">
                     <article class="product-card">
-                        <h3 class="product-card__title">Перфоратор BOSCH BFG 6000</h3>
+                        <h3 class="product-card__title">Перфоратор BOSCH BFG&nbsp;6000</h3>
                         <div class="product-card__image-wrapper">
                             <img class="product-card__img" src="img/prod-5000.jpg" alt="">
                         </div>
-                        <p class="product-card__price-invalid">30500 Р.</p>
+                        <s class="product-card__price-invalid">30500 Р.</s>
                         <p class="product-card__price-valid">25500 Р.</p>
                         <div class="product-card__popup card-popup">
                             <button class="card-popup__button card-popup__button--buy">Купить</button>
@@ -190,11 +190,11 @@
                 </li>
                 <li class="popular-catalog__item">
                     <article class="product-card">
-                        <h3 class="product-card__title">Перфоратор BOSCH BFG 2000</h3>
+                        <h3 class="product-card__title">Перфоратор BOSCH BFG&nbsp;2000</h3>
                         <div class="product-card__image-wrapper">
                             <img class="product-card__img" src="img/prod-2000.jpg" alt="">
                         </div>
-                        <p class="product-card__price-invalid">22500 Р.</p>
+                        <s class="product-card__price-invalid">22500 Р.</s>
                         <p class="product-card__price-valid">12500 Р.</p>
                         <div class="product-card__popup card-popup">
                             <button class="card-popup__button card-popup__button--buy">Купить</button>
@@ -207,7 +207,7 @@
         <section class="main__manufacturers manufacturers container">
             <header class="manufacturers__header section-header">
                 <h2 class="section-header__title manufacturers__title">Популярные производители</h2>
-                <a href="#" class="section-header__link manufacturers__link button">Все производители</a>
+                <a href="#" class="section-header__link manufacturers-header__link button">Все производители</a>
             </header>
             <ul class="manufacturers__list">
                 <li class="manufacturers__item">
@@ -277,8 +277,8 @@
                         <h3 class="services-slider__slide-title">Доставка</h3>
                         <p class="services-slider__slide-description">
                             Мы с удовольствием доставим ваш товар прямо 
-                            к вашему подъезду совершенно бесплатно!
-                            Ведь мы неплохо заработаем, 
+                            к вашему подъезду совершенно бесплатно!<br>
+                            Ведь мы неплохо заработаем,<br>
                             поднимая его на ваш этаж!
                         </p>
                     </div>
@@ -292,7 +292,7 @@
                             Дом уж восстановите как-нибудь сами.
                         </p>
                     </div>
-                    <div class="services-slider__slide">
+                    <div class="services-slider__slide services-slider__slide--current">
                         <h3 class="services-slider__slide-title">Кредит</h3>
                         <p class="services-slider__slide-description">
                             Залезть в долговую яму стало проще!
@@ -331,7 +331,7 @@
                 <div class="about__contacts-map">
                     <img src="img/map.png" alt="Адрес: г. Санкт-Петербург, наб. Реки Карповки, 5 лит П" width="300" height="158">
                 </div>
-                <button>заблудились? напишите нам!</button>
+                <button class="button about__button">заблудились? напишите нам!</button>
             </div>
         </section>
     </main>
