@@ -1218,14 +1218,30 @@
 
 /* CATALOG */
 
+.catalog__wrapper {
+    display: grid;
+    grid-template-columns: 220px 1fr ;
+    gap: 20px;
+    padding-bottom: 59px;
+}
+
+/* BREADCRUMBS */
+
 .breadcrumbs {
+    grid-column: 1 / -1;
+    display: flex;
     margin: 0;
-    padding: 0;
+    padding: 21px 0 0 0;
 
     list-style: none;
 }
 
+.breadcrumbs__item {
+    margin-right: 40px;
+}
+
 .breadcrumbs__link {
+    display: block;
     font-family: "PT Sans";
     font-style: normal;
     font-weight: 400;
@@ -1236,9 +1252,13 @@
     color: var(--basic-black);
 }
 
+/* CATALOG TITLE */
+
 .catalog__title {
+    grid-column: 1 / -1;
     margin: 0;
-    padding: 0;
+    padding: 30px 0 30px 30px;
+    box-sizing: border-box;
 
     font-family: "Cuprum";
     font-style: normal;
@@ -1250,22 +1270,41 @@
     background-color: var(--basic-background);
 }
 
+/* FILTERS */
+
+.filters {
+    grid-column: 1 / 2;
+}
+
 .filters__header {
     background-color: var(--special-beige);
+    padding: 10px 18px;
+    margin-bottom: 14px;
 }
 
 .filters__header-title {
+    margin: 0;
+    padding: 0;
     font-family: "PT Sans";
     font-style: normal;
     font-weight: 400;
     font-size: 13px;
     line-height: 18px;
+    text-transform: uppercase;
 
     color: var(--basic-black);
 }
 
 .filters__form-section {
+    margin: 0;
+    margin-bottom: 16px;
+    padding: 0;
+    padding-bottom: 25px;
     border: none;
+}
+
+.filters__form-section:not(:last-of-type) {
+    border-bottom: 1px solid var(--basic-grey);
 }
 
 .filters__form-section-title {
@@ -1278,7 +1317,18 @@
     color: var(--basic-black);
 }
 
+.filters__form-section-manufacturers-title {
+    margin-bottom: 17px;
+}
+.filters__form-section-feed-title {
+    margin-bottom: 23px;
+}
+
 .filters__form-section-label {
+    display: block;
+    margin-bottom: 20px;
+    margin-left: 35px;
+
     font-family: "PT Sans";
     font-style: normal;
     font-weight: 400;
@@ -1288,12 +1338,31 @@
     color: var(--basic-black);
 }
 
+.filters__form button {
+    display: block;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+
+/* RESULTS */
+
+.results {
+    grid-column: 2/-1;
+}
+
 .results__header {
+    display: flex;
+    padding: 10px;
+    box-sizing: border-box;
     background-color: var(--special-beige);
 }
 
 .results__header-title {
     margin: 0;
+    margin-right: auto;
     padding: 0;;
 
     font-family: "PT Sans";
@@ -1305,11 +1374,18 @@
     color: var(--basic-black);
 }
 
+
 .sort-list {
+    display: flex;
     margin: 0;
+    margin-right: 46px;
     padding: 0;
 
     list-style: none;
+}
+
+.sort-list__item:not(:last-child) {
+    margin-right: 65px;
 }
 
 .sort-list__button {
@@ -1345,29 +1421,85 @@
 }
 
 .sort-direction-list {
+    display: flex;
+    align-items: center;
     margin: 0;
     padding: 0;
 
     list-style: none;
 }
 
-/* RESULTS */
+.sort-direction-list__item:not(:last-child) {
+    margin-right: 21px;
+}
+
+.sort-direction-list__button {
+    margin: 0;
+    padding: 0;
+    width: 11px;
+    height: 10px;
+    border: none;
+    background-color: transparent;
+}
+
+.sort-direction-list__button--up {
+    transform: rotate(180deg) translateY(-50%);
+
+}
+
+.sort-direction-list__button:hover path {
+    fill: var(--basic-red);
+}
+.sort-direction-list__button:focus path {
+    fill: var(--basic-red);
+}
+.sort-direction-list__button:active path {
+    fill: var(--basic-red);
+}
+
 
 .results__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
     margin: 0;
+    margin-top: 28px;
+    margin-bottom: 48px;
     padding: 0;
 
     list-style: none;
 }
 
 .pagination {
+    grid-column: 2 / -1;
+    display: flex;
     margin: 0;
     padding: 0;
 
     list-style: none;
 }
 
+.pagination__item {
+    margin-right: 10px;
+}
+
+.pagination__link {
+    display: block;
+    padding: 10px 15px;
+
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.pagination__button {
+    padding: 10px 31px;
+}
+
 .catalog__about {
+    padding: 65px;
     background-color: var(--basic-background);
 }
 
@@ -1385,7 +1517,9 @@
 }
 
 .catalog-about__description {
+    width: 907px;
     margin: 0;
+    margin-top: 25px;
     padding: 0;
 
     font-family: 'PT Sans';

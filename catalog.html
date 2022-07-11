@@ -84,8 +84,8 @@
             </div>
         </div>
     </header>
-    <main class="page__main main">
-        <div class="container">
+    <main class="page__main main catalog">
+        <div class="container catalog__wrapper">
             <ul class="breadcrumbs">
                 <li class="breadcrumbs__item">
                     <a href="#" class="breadcrumbs__link">Главная</a>
@@ -109,38 +109,38 @@
                     <fieldset class="filters__form-section">
                         <legend class="filters__form-section-title">Цена:</legend>
                     </fieldset>
-                    <fieldset class="filters__form-section">
-                        <legend class="filters__form-section-title">Производители:</legend>
+                    <fieldset class="filters__form-section filters__form-section__manufacturers">
+                        <legend class="filters__form-section-title filters__form-section-manufacturers-title">Производители:</legend>
                         <label class="filters__form-section-label">
                             bosch
-                            <input type="checkbox" name="manufacturers" value="bosh">
+                            <input class="visually-hidden" type="checkbox" name="manufacturers" value="bosh">
                         </label>
                         <label class="filters__form-section-label">
                             интерскол
-                            <input type="checkbox" name="manufacturers" value="intescol">
+                            <input class="visually-hidden" type="checkbox" name="manufacturers" value="intescol">
                         </label>
                         <label class="filters__form-section-label">
                             makita
-                            <input type="checkbox" name="manufacturers" value="makita">
+                            <input class="visually-hidden" type="checkbox" name="manufacturers" value="makita">
                         </label>
                         <label class="filters__form-section-label">
                             dewalt
-                            <input type="checkbox" name="manufacturers" value="dewalt">
+                            <input class="visually-hidden" type="checkbox" name="manufacturers" value="dewalt">
                         </label>
                         <label class="filters__form-section-label">
                             hitachi
-                            <input type="checkbox" name="manufacturers" value="hitachi">
+                            <input class="visually-hidden" type="checkbox" name="manufacturers" value="hitachi">
                         </label>
                     </fieldset>
-                    <fieldset class="filters__form-section">
-                        <legend class="filters__form-section-title">Питание:</legend>
+                    <fieldset class="filters__form-section filters__form-section__feed">
+                        <legend class="filters__form-section-title filters__form-section-feed-title">Питание:</legend>
                         <label class="filters__form-section-label">
                             Аккумуляторные
-                            <input type="radio" name="feed" value="rechargeable">
+                            <input class="visually-hidden" type="radio" name="feed" value="rechargeable">
                         </label>
                         <label class="filters__form-section-label">
                             Сетевые
-                            <input type="radio" name="feed" value="network">
+                            <input class="visually-hidden" type="radio" name="feed" value="network">
                         </label>
                     </fieldset>
                     <button class="button button--third" type="submit">Показать</button>
@@ -162,10 +162,18 @@
                     </ul>
                     <ul class="sort-direction-list">
                         <li class="sort-direction-list__item">
-                            <button class="sort-direction-list__button">Вверх</button>
+                            <button class="sort-direction-list__button sort-direction-list__button--up">
+                                <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.5 10L0 0H11" fill="#C5C5C5"/>
+                                </svg>
+                            </button>
                         </li>
                         <li class="sort-direction-list__item">
-                            <button class="sort-direction-list__button">Вниз</button>
+                            <button class="sort-direction-list__button sort-direction-list__button--down">
+                                <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5.5 10L0 0H11" fill="#C5C5C5"/>
+                                </svg>
+                            </button>
                         </li>
                     </ul>
                 </header>
@@ -317,7 +325,7 @@
             <div class="container">
                 <h2 class="catalog-about__title">Пара слов о перфораторах</h2>
                 <p class="catalog-about__description">
-                    Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
+                    Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
                     Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. 
                     В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
                 </p>
@@ -326,7 +334,7 @@
     </main>
     <footer class="page__footer page-footer">
         <div class="footer-top">
-            <div class="container">
+            <div class="container footer-top__wrapper">
                 <a href="#" class="page-footer__logo">
                     <img src="img/footer-logo.svg" width="220" height="68">
                     <span class="visually-hidden">На главную</span>
@@ -369,7 +377,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <div class="container">
+            <div class="footer-bottom__wrapper container">
                 <p class="copyright">
                     © 2010–2021 Компания «Техномарт»
                     Все права защищены
@@ -392,11 +400,11 @@
                     </li>
                 </ul>
                 <div class="page-footer__sources sources">
-                    <p class="sources__text">
+                    <p class="sources__text-callback sources__text">
                         Обратная связь:
                         <a href="mailto:mail@htmlacademy.ru" class="sources__link">mail@htmlacademy.ru</a>
                     </p>
-                    <p class="sources__text">
+                    <p class="sources__text-desighned sources__text">
                         Разработано —
                         <a href="htmlacademy.ru" class="sources__link">htmlacademy.ru</a>
                     </p>
