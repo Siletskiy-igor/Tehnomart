@@ -483,12 +483,19 @@
 
 .slider__control {
     position: absolute;
-    top: 100px;
+    top: 220px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .slider__arrow {
     position: absolute;
-    top: 150px;
+    top: 50%;
+    left: 15px;
+}
+
+.slider__arrow--forward {
+    transform: rotate(180deg) translateX(-532px);
 }
 
 .slide {
@@ -496,18 +503,34 @@
 
 }
 
+.slide-perfs {
+    background-image: url(../img/perfs.jpg);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
+.slide-drills {
+    background-image: url(../img/drills.jpg);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
 .slide--current {
-    display: grid;
+    grid-row: span 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     align-items: start;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: auto auto 1fr;
+    justify-content: start;
     box-sizing: border-box;
+    padding: 23px 24px 27px;
 }
 
 .slide__title {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
     margin: 0;
+    margin-bottom: 5px;
     padding: 0;
     z-index: 1;
 
@@ -523,6 +546,7 @@
     grid-column: 1 / -1;
     grid-row: 2 / 3;
     margin: 0;
+    margin-bottom: auto;
     padding: 0;
     z-index: 1;
 
@@ -833,12 +857,15 @@
 }
 
 .services-slider__slide--current {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
 }
 
 .services-slider__control-button {
     text-align: start;
-    padding: 12px 0 12px 22px;
+    padding: 14px 22px 18px;
     width: 240px;
     border: none;
     background-color: var(--basic-dark-grey);
@@ -865,6 +892,7 @@
 
 .services-slider__slide-title {
     margin: 0;
+    margin-bottom: 40px;
     padding: 0;
 
     font-family: "Cuprum";
@@ -878,7 +906,7 @@
 .services-slider__slide-description {
     width: 300px;
     margin: 0;
-    margin-top: 30px;
+    margin-bottom: 26px;
     padding: 0;
 
     font-family: "PT Sans";
@@ -887,6 +915,10 @@
     font-size: 13px;
     line-height: 24px;
     color: var(--basic-black);
+}
+
+.services-slider__slide-button {
+    padding: 10px 44px;
 }
 
 /* ABOUT */
