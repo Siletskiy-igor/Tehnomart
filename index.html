@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="html" lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -334,7 +334,7 @@
                 <button class="button about__button">заблудились? напишите нам!</button>
             </div>
         </section>
-    </main>
+    </main> 
     <footer class="page__footer page-footer">
         <div class="footer-top">
             <div class="container footer-top__wrapper">
@@ -415,35 +415,45 @@
             </div>
         </div>
     </footer>
-    <artile class="email-popup">
+    <!-- <article class="email-popup">
         <div class="email-popup__top">
             <form class="email-popup__form" action="" method="post">
-                <label class="email-popup__label" for="email-popup__form-user-name">Ваше имя:</label>
-                <input type="text" name="user-first-name" id="email-popup__form-user-name" placeholder="Имя Фамилия">
-                <label class="email-popup__label" for="email-popup__form-form-user-mail">Ваш e-mail:</label>
-                <input type="email" name="user-email" id="email-popup__form-form-user-mail" placeholder="email@example.com">
-                <label class="email-popup__label" for="email-popup__form-message">Текст письма:</label>
-                <textarea name="text-of-message" id="email-popup__form-message" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+                <label class="email-popup__label">
+                    <span>Ваше имя:</span>
+                    <input type="text" name="user-first-name" id="email-popup__form-user-name" placeholder="Имя Фамилия">
+                </label>
+                <label class="email-popup__label">
+                    <span>Ваш e-mail:</span>
+                    <input type="email" name="user-email" id="email-popup__form-form-user-mail" placeholder="email@example.com">
+                </label>
+                <label class="email-popup__label email-popup__message-label">
+                    <span>Текст письма:</span>
+                    <textarea name="text-of-message" id="email-popup__form-message" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+                </label>
             </form>
         </div>
         <div class="email-popup__bottom">
-            <button class="button">Отправить</button>
+            <button class="button email-popup__button">Отправить</button>
         </div>
-        <button class="button-close">Закрыть</button>
+        <button class="button-close email-popup__button-close">Закрыть</button>
     </article>
+
     <article class="map-popup">
-        <div class="map-popup__wrapper"></div>
-        <button class="button-close">Закрыть</button>
+        <div class="map-popup__wrapper">
+            <img src="img/map.png" alt="" width="943" height="449">
+        </div>
+        <button class="button-close map-popup__button-close">Закрыть</button>
     </article>
+
     <article class="cart-popup">
         <div class="cart-popup__top">
             <p class="cart-popup__text">Товар добавлен в корзину!</p>
         </div>
         <div class="cart-popup__bottom">
-            <a href="#" class="cart-poput__link button">Оформить заказ</a>
+            <a href="#" class="cart-popup__link cart-popup__button button">Оформить заказ</a>
             <button class="cart-popup__button button button--secondary">Продолжить покупки</button>
         </div>
-        <button class="button-close">Закрыть</button>
+        <button class="cart-popup__button-close button-close">Закрыть</button>
     </article>
 </body>
 </html>

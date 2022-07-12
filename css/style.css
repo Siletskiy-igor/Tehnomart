@@ -26,6 +26,14 @@
     margin: 0;
     padding: 0;
     min-width: 960px;
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    align-content: start;
+}
+
+.html {
+    height: 100%;
 }
 
 .container {
@@ -386,6 +394,7 @@
 
 .promo {
     padding-top: 50px;
+    padding-bottom: 59px;
 }
 
 .promo__list {
@@ -540,10 +549,15 @@
 
 /* POPULAR PRODUCT */
 
+.popular-catalog {
+    padding-bottom: 70px;
+}
+
 .section-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
     padding: 25px 14px 26px 28px;
     background-color: var(--basic-beige);
 }
@@ -706,6 +720,10 @@
 }
 
 /* MANUFACTURERS */
+
+.manufacturers {
+    padding-bottom: 70px;
+}
 
 .manufacturers__list {
     display: grid;
@@ -1179,11 +1197,34 @@
 
 /* POPUP */
 
+.email-popup {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    width: 620px;
+    margin: 0 auto;
+    padding-top: 39px;
+
+    border-top: 7px solid var(--basic-red);
+    /* filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15)); */
+}
+
 .email-popup__top {
+    padding: 0 80px;
     background-color: var(--basic-white);
 }
 
+.email-popup__form {
+    display: grid;
+    gap: 13px 10px;
+    grid-template-columns: 1fr 1fr;
+}
+
 .email-popup__label {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
     font-family: "Cuprum";
     font-style: normal;
     font-weight: 400;
@@ -1192,12 +1233,62 @@
     color: var(--basic-black);
 }
 
+.email-popup__message-label {
+    grid-column: span 2;
+
+}
+
 .email-popup__bottom {
+    padding: 37px 80px;
     background-color: #f4f4f4;
+}
+
+.email-popup__button {
+    display: block;
+    padding-top: 9px;
+    padding-bottom: 11px;
+    width: 100%;
+}
+
+.email-popup input,
+.email-popup textarea {
+    border: 2px solid var(--basic-greylight);
+    border-radius: 2px;
+}
+
+.email-popup__button-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.map-popup {
+    position: relative;
+    display: block;
+    width: 943px;
+    margin: 0 auto;
+    border-top: 7px solid var(--basic-red);
+}
+
+.map-popup__button-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.cart-popup {
+    position: relative;
+    display: block;
+    width: 620px;
+    margin: 0 auto;
+    border-top: 7px solid var(--basic-red);
 }
 
 .cart-popup__top {
     background-color: var(--basic-white);
+    padding-top: 66px;
+    padding-bottom: 66px;
+    text-align: center;
 }
 
 .cart-popup__text {
@@ -1213,7 +1304,24 @@
 }
 
 .cart-popup__bottom {
+    padding: 37px 114px;
+    display: flex;
+    justify-content: center;
     background-color: #f4f4f4;
+}
+
+.cart-popup__button {
+    display: block;
+    width: 192px;
+    padding-top: 11px;
+    padding-bottom: 9px;
+}
+
+.cart-popup__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
 }
 
 /* CATALOG */
@@ -1223,6 +1331,12 @@
     grid-template-columns: 220px 1fr ;
     gap: 20px;
     padding-bottom: 59px;
+}
+
+.cart-popup__button-close {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 /* BREADCRUMBS */
