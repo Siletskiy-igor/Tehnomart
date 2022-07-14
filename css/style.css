@@ -109,6 +109,35 @@
     background-color: transparent;
     border-color: var(--basic-red);
 }
+
+.new-sticker {
+    position: relative;
+    overflow: hidden;
+}
+
+.new-sticker::after {
+    content: "New";
+
+    position: absolute;
+    top: 10px;
+    right: -25px;
+
+    width: 100px;
+    height: 30px;
+
+    transform: rotate(45deg);
+
+    font-family: "Cuprum";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    color: var(--basic-white);
+    text-transform: uppercase;
+    text-align: center;
+
+    background-color: var(--basic-red);
+}
 /* Что-то нужно придумать для этой кнопки */
 
 /* HEADER */
@@ -205,9 +234,6 @@
     list-style: none;
 }
 
-.menu-navigation__item {
-    text-align: center;
-}
 
 .menu-navigation__link {
     display: block;
@@ -231,21 +257,65 @@
 
 .menu-navigation__link-bookmark {
     background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-navigation__link-bookmark::before {
+    content: "";
+    display: block;
+    margin-right: 8px;
+    width: 14px;
+    height: 16px;
+
+    background-image: url(../img/icons/icon-bookmark.svg);
+    opacity: 0.3;
+}
+
+.menu-navigation__link-bookmark:hover::before {
+    opacity: 1;
 }
 
 .menu-navigation__link-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--basic-red);
+}
+
+.menu-navigation__link-cart::before {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    margin-right: 8px;
+
+    background-image: url(../img/icons/icon-cart.svg);
+    opacity: 0.3;
 }
 
 .menu-navigation__link-cart:hover {
     background-color: var(--error);
 }
+
+.menu-navigation__link-cart:hover::before {
+    opacity: 1;
+}
+
 .menu-navigation__link-cart:focus {
     background-color: var(--error);
 }
 
+.menu-navigation__link-cart:focus::before {
+    opacity: 1;
+}
+
 .menu-navigation__link-order {
     background-color: var(--basic-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .menu-navigation__link-order:hover {
@@ -286,9 +356,11 @@
 }
 
 .header-contacts__phone {
-    display: block;
-    border: 3px solid var(--basic-white);
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 0 5px;
+    
     font-family: "Cuprum";
     font-style: normal;
     font-weight: 700;
@@ -296,6 +368,20 @@
     line-height: 30px;
     color: var(--basic-red);
     text-decoration: none;
+
+    border: 3px solid var(--basic-white);
+}
+
+.header-contacts__phone::before {
+    content: "";
+
+    display: block;
+    width: 19px;
+    height: 19px;
+    margin-right: 16px;
+
+    background-image: url(../img/icons/icon-phone.svg);
+
 }
 
 .header-contacts__address {
@@ -321,7 +407,9 @@
 }
 
 .login__link {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 12px 24px;
 
     font-family: "Cuprum";
@@ -347,6 +435,22 @@
 }
 .login__link:active {
     color: var(--basic-greylight);
+}
+
+.login__link-enter::before {
+    content: "";
+
+    display: block;
+    width: 20px;
+    height: 17px;
+    margin-right: 6px;
+
+    background-image: url(../img/icons/icon-login.svg);
+    opacity: 0.3;
+}
+
+.login__link-enter:hover::before {
+    opacity: 1;
 }
 
 .site-navigation__list {
@@ -409,19 +513,96 @@
 }
 
 .promo-materials {
+    position: relative;
     background-color: var(--special-yellow);
 }
+
+.promo-materials::before {
+    content: "";
+
+    position: absolute;
+    top: 31px;
+    right: 43px;
+
+    width: 44px;
+    height: 65px;
+
+    background-image: url(../img/icons/icon-1.svg);
+}
+
 .promo-instruments {
+    position: relative;
     background-color: var(--special-blue);
 }
+
+.promo-instruments::before {
+    content: "";
+
+    position: absolute;
+    top: 34px;
+    right: 31px;
+    
+    width: 75px;
+    height: 61px;
+
+    background-image: url(../img/icons/icon-2.svg);
+}
+
 .promo-tech {
+    position: relative;
+
     background-color: var(--special-lilac);
 }
+
+.promo-tech::before {
+    content: "";
+
+    position: absolute;
+    top: 31px;
+    right: 31px;
+    
+    width: 78px;
+    height: 62px;
+
+    background-image: url(../img/icons/icon-3.svg);
+}
+
 .promo-sale {
+    position: relative;
+
     background-color: var(--special-greenlight);
 }
+
+.promo-sale::before {
+    content: "";
+
+    position: absolute;
+    top: 26px;
+    right: 45px;
+    
+    width: 59px;
+    height: 72px;
+
+    background-image: url(../img/icons/icon-4.svg);
+}
+
 .promo-delivery {
+    position: relative;
+
     background-color: var(--special-yellow);
+}
+
+.promo-delivery::before {
+    content: "";
+
+    position: absolute;
+    top: 32px;
+    right: 31px;
+    
+    width: 78px;
+    height: 63px;
+
+    background-image: url(../img/icons/icon-5.svg);
 }
 
 .promo-card {
@@ -851,9 +1032,51 @@
 }
 
 .services-slider__slide {
+    position: relative;
     display: none;
     box-sizing: border-box;
     flex-basis: calc(100% - (240px+80px));
+}
+
+.slide-delivery::after {
+    content: "";
+
+    position: absolute;
+    bottom: -92px;
+    left: 114px;
+
+    width: 468px;
+    height: 261px;
+    z-index: 1;
+
+    background-image: url(../img/wehicle.png);
+
+}
+.slide-guarantee::after {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 389px;
+    height: 283px;
+
+    background-image: url(../img/medal.png);
+
+}
+.slide-credit::after {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 465px;
+    height: 285px;
+
+    background-image: url(../img/credit.png);
+
 }
 
 .services-slider__slide--current {
@@ -900,13 +1123,15 @@
     font-weight: 400;
     font-size: 30px;
     line-height: 30px;
+    text-transform: uppercase;
     color: var(--basic-dark-grey);
+    z-index: 2;
 }
 
 .services-slider__slide-description {
     width: 300px;
     margin: 0;
-    margin-bottom: 26px;
+    margin-bottom: auto;
     padding: 0;
 
     font-family: "PT Sans";
@@ -915,6 +1140,7 @@
     font-size: 13px;
     line-height: 24px;
     color: var(--basic-black);
+    z-index: 2;
 }
 
 .services-slider__slide-button {
@@ -974,6 +1200,8 @@
 }
 
 .about__information-item {
+    display: flex;
+    align-items: center;
     margin-bottom: 12px;
 
     font-family: "Cuprum";
@@ -982,6 +1210,16 @@
     font-size: 18px;
     line-height: 24px;
     color: var(--basic-black);
+}
+
+.about__information-item::before {
+    content: "";
+
+    width: 25px;
+    height: 2px;
+    margin-right: 12px;
+
+    background-color: var(--basic-red);
 }
 
 .about__contacts-title {
