@@ -16,7 +16,7 @@
     <header class="page__header header">
         <div class="header__top menu">
             <div class="container menu__wrapper">
-                <a href="#" class="header__logo logo">
+                <a href="index.html" class="header__logo logo">
                     <img class="logo__img" src="img/icons/logo-technomart.svg" alt="" width="108" height="18">
                     <span class="visually-hidden">На главную</span>
                 </a>
@@ -108,40 +108,58 @@
                 <form class="filters__form" action="get">
                     <fieldset class="filters__form-section">
                         <legend class="filters__form-section-title">Цена:</legend>
+                        <div class="range-slider">
+                            <div class="range-slider__controll">
+                                <div class="range-slider__scale">
+                                    <div class="range-slider__bar" style="width: 30%; margin-left: 20%">
+                                        <div class="range-slider__toggle range-slider__toggle-min"></div>
+                                        <div class="range-slider__toggle range-slider__toggle-max"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="range-slider__price-control price-control">
+                                <div class="price-control__input-wrapper">
+                                    <input class="price-control__input price-control__input-min" type="number" name="price-control-min" id="price-control-min">
+                                </div>
+                                <div class="price-control__input-wrapper">
+                                    <input class="price-control__input price-control__input-max" type="number" name="price-control-max" id="price-control-max">
+                                </div>
+                            </div>
+                        </div>
                     </fieldset>
                     <fieldset class="filters__form-section filters__form-section__manufacturers">
                         <legend class="filters__form-section-title filters__form-section-manufacturers-title">Производители:</legend>
-                        <label class="filters__form-section-label">
-                            bosch
-                            <input class="visually-hidden" type="checkbox" name="manufacturers" value="bosh">
-                        </label>
-                        <label class="filters__form-section-label">
-                            интерскол
-                            <input class="visually-hidden" type="checkbox" name="manufacturers" value="intescol">
-                        </label>
-                        <label class="filters__form-section-label">
-                            makita
-                            <input class="visually-hidden" type="checkbox" name="manufacturers" value="makita">
-                        </label>
-                        <label class="filters__form-section-label">
-                            dewalt
-                            <input class="visually-hidden" type="checkbox" name="manufacturers" value="dewalt">
-                        </label>
-                        <label class="filters__form-section-label">
-                            hitachi
-                            <input class="visually-hidden" type="checkbox" name="manufacturers" value="hitachi">
-                        </label>
+                        <div class="filters__form-set">
+                            <input class="filters__form-checkbox visually-hidden" id="checkbox-bosch" type="checkbox" name="manufacturers" value="bosh">
+                            <label class="filters__form-section-label" for="checkbox-bosch">bosch</label>
+                        </div>
+                        <div class="filters__form-set">
+                            <input class="filters__form-checkbox visually-hidden" id="checkbox-interscol" type="checkbox" name="manufacturers" value="intescol">
+                            <label class="filters__form-section-label" for="checkbox-interscol">интерскол</label>
+                        </div>
+                        <div class="filters__form-set">
+                            <input class="filters__form-checkbox visually-hidden" id="checkbox-makita" type="checkbox" name="manufacturers" value="makita">
+                            <label class="filters__form-section-label" for="checkbox-makita">makita</label>
+                        </div>
+                        <div class="filters__form-set">
+                            <input class="filters__form-checkbox visually-hidden" id="checkbox-dewalt" type="checkbox" name="manufacturers" value="dewalt">
+                            <label class="filters__form-section-label" for="checkbox-dewalt">dewalt</label>
+                        </div>
+                        <div class="filters__form-set">
+                            <input class="filters__form-checkbox visually-hidden" id="checkbox-hitachi" type="checkbox" name="manufacturers" value="hitachi">
+                            <label class="filters__form-section-label" for="checkbox-hitachi">hitachi</label>
+                        </div>
                     </fieldset>
                     <fieldset class="filters__form-section filters__form-section__feed">
                         <legend class="filters__form-section-title filters__form-section-feed-title">Питание:</legend>
-                        <label class="filters__form-section-label">
-                            Аккумуляторные
-                            <input class="visually-hidden" type="radio" name="feed" value="rechargeable">
-                        </label>
-                        <label class="filters__form-section-label">
-                            Сетевые
-                            <input class="visually-hidden" type="radio" name="feed" value="network">
-                        </label>
+                        <div class="filters__form-set">
+                            <input class="filters__form-radio visually-hidden" id="filters__form-radio-feed" type="radio" name="feed" value="rechargeable">
+                            <label class="filters__form-section-label" for="filters__form-radio-feed">Аккумуляторные</label>
+                        </div>
+                        <div class="filters__form-set">
+                            <input class="filters__form-radio visually-hidden" id="filters__form-radio-network" type="radio" name="feed" value="network">
+                            <label class="filters__form-section-label" for="filters__form-radio-network">Сетевые</label>
+                        </div>
                     </fieldset>
                     <button class="button button--third" type="submit">Показать</button>
                 </form>
